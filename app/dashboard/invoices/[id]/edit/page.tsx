@@ -1,6 +1,7 @@
 import Form from "@/app/ui/invoices/edit-form";
 import Breadcrumbs from "@/app/ui/invoices/breadcrumbs";
 import { fetchInvoiceById, fetchCustomers } from "@/app/lib/data";
+import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { id: string } }) {
   const { id } = params;
@@ -8,6 +9,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     fetchInvoiceById(id),
     fetchCustomers(),
   ]); //REMINDER: When all the promises in the given iterable fulfill. The fulfillment value is an array of fulfillment values, in the order of the promises passed, regardless of completion order.
+
+  if (!invoice) {
+    notFound();
+  }
   return (
     <main>
       <Breadcrumbs
