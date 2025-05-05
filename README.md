@@ -1,6 +1,6 @@
 # Dashboard Example
 
-## Link: https://dashboard-example-6fg4.vercel.app
+## Link: https://dashboard-example-seven-gilt.vercel.app/login
 
 This project is a dashboard application built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). It provides functionality to manage invoices, customers, and users. It includes authentication using [NextAuth.js](https://next-auth.js.org/), form validation with [Zod](https://zod.dev/), and uses PostgreSQL as the database. Deployment is handled via Vercel.
 
